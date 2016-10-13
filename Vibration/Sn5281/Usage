@@ -1,0 +1,9 @@
+Sn258cRw 1.2 Usage.
+1/ 使用步骤：
+	1)video_open()
+	2)XU_Init_Ctrl()
+	3.1)Flash RW. Write_SF_From_File(int dev, const char *filename) or Read_SF_To_File(int dev, const char *filename) or Verify_SF(int dev, const char *filename) 
+	3.2)ASIC  RW. XU_ASIC_Get_Data(int fd, int Addr, __u8 *uData) or XU_ASIC_Set_Data(int fd, int Addr, __u8 uData)
+	3.3)I2C   RW. SonixI2cSend(int fd, int SlaveID, int Addr, __u8 uData[], long llength) or SonixI2cRecv(int fd, int SlaveID, int Addr, __u8 uData[], long llength)
+	4)close
+2/此程序为258c, Flash读写/ASIC读写/I2C读写 Demo,仅供参考。
