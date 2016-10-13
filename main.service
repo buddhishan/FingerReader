@@ -1,0 +1,12 @@
+[Unit]
+Description=Main Serives
+After=xdk-daemon.service
+
+[Service]
+ExecStart=/home/root/service/main_test.sh
+Restart=always
+RestartSec=10s
+
+
+[Install]
+WantedBy=multi-user.target
